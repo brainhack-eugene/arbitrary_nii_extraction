@@ -40,7 +40,7 @@ def generate_masks(atlas_image_filename, therange = None):
     masks = list()
     for i in range(len(therange)):
 
-        tempmask = nilearn.image.new_img_like(atlas_image,labeled_image_data==therange[i])
+        tempmask = nilearn.image.new_img_like(atlas_image_filename,labeled_image_data==therange[i])
         masks.append(tempmask)
 
     return(masks)
