@@ -31,9 +31,8 @@ def extract_from_masks(mask_files,data_file, masknames=None, dataframe = False, 
 
     return(output) 
 
-def generate_masks(atlas_image, therange = None):
-    
-    atlas_img = nib.load(atlas_image)
+def generate_masks(atlas_image_filename, therange = None):
+    atlas_img = nib.load(atlas_image_filename)
     labeled_image_data = atlas_img.get_data()
 
     if therange == None:
